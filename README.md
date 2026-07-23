@@ -8,7 +8,7 @@
 
 3-stage CNN + Group-wise Transformer 混合架構：DWTE（深度可分離卷積切塊）→ Convolutional Projection → Group-wise Multi-Head Attention (G-MHA) → Group-wise MLP (G-MLP)，stage 3 額外加入 EfficientNet-B0 風格的 projection。
 
-## 與原論文的差異（摘要，完整說明見 `model.py` docstring）
+## 與原論文的差異
 
 | 項目 | 狀態 |
 |---|---|

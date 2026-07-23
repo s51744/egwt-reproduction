@@ -8,8 +8,7 @@ Training script for EGWT, mirroring the paper's fine-tuning protocol (Section IV
   - stage1+stage2 frozen, fine-tune from stage3 onward (Section IV.C)
   - random cropping, rotation, flipping augmentation
   - stage-3 EfficientNet-projection blocks warm-started from real ImageNet weights;
-    everything else randomly initialized (no full EGWT ImageNet pretraining -- see
-    model.py docstring and the top-level reproduction report for why)
+    everything else randomly initialized (no full EGWT ImageNet pretraining
 
 Compute-budget deviation (documented, user-approved): epoch count is reduced from
 whatever the paper implies for convergence, to fit within the overall 6-hour budget
