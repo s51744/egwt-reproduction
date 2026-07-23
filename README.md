@@ -6,7 +6,7 @@
 
 ## 架構
 
-3-stage CNN + Group-wise Transformer 混合架構：DWTE（深度可分離卷積切塊）→ Convolutional Projection → Group-wise Multi-Head Attention (G-MHA) → Group-wise MLP (G-MLP)，stage 3 額外加入 EfficientNet-B0 風格的 projection。詳見 [`model.py`](model.py) 開頭的 docstring，內含每一項架構決策的完整依據。
+3-stage CNN + Group-wise Transformer 混合架構：DWTE（深度可分離卷積切塊）→ Convolutional Projection → Group-wise Multi-Head Attention (G-MHA) → Group-wise MLP (G-MLP)，stage 3 額外加入 EfficientNet-B0 風格的 projection。
 
 ## 與原論文的差異（摘要，完整說明見 `model.py` docstring）
 
@@ -26,8 +26,6 @@
 | PlantVillage | 99.88% | 93.81% | 23.04M | 19.88M |
 | cassava | 84.29% | 69.71% | 23.04M | 19.84M |
 | tomato | 99.99% | 93.46% | 23.04M | 19.85M |
-
-落差主因是算力限制下的訓練妥協（epoch 數、ImageNet 預訓練規模），而非架構錯誤——詳細分析、逐 epoch 對照、以及各項妥協的具體理由，請見 `model.py`、`train.py` 的 docstring。
 
 ## 使用方式
 
