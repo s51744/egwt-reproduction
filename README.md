@@ -4,6 +4,8 @@
 
 論文本身未公開程式碼，此為根據論文公式、架構圖、與訓練細節逐步重建的 PyTorch 實作，並在論文引用的三個原始資料集（PlantVillage、cassava、tomato leaves）上實際訓練驗證。
 
+> **目前狀態**：完整 ImageNet-1k from-scratch 預訓練進行中（epoch 46/50）。下方「結果對照」表是用先前的算力妥協版本（EfficientNet-B0 真實預訓練 + Transformer 隨機初始化）跑出來的，待完整預訓練完成後會用真正的預訓練權重重新微調並更新數字。
+
 ## 架構
 
 3-stage CNN + Group-wise Transformer 混合架構：DWTE（深度可分離卷積切塊）→ Convolutional Projection → Group-wise Multi-Head Attention (G-MHA) → Group-wise MLP (G-MLP)，stage 3 額外加入 EfficientNet-B0 風格的 projection。詳見 [`model.py`](model.py) 開頭的 docstring，內含每一項架構決策的完整依據。
@@ -16,7 +18,7 @@
 | Convolutional Projection 的 stride | ✅ 完全比照 Fig. 6(b) 的 stride=1（改用 PyTorch flash attention 解決效能問題後，不再需要 stride=2 妥協） |
 | Table 2 的 768/1024 工作維度 | ⚠️ 論文資訊不足以唯一決定架構（字面讀取會使參數量超預算達1.9倍），採用內部最一致的替代讀法，參數量 19.88M vs 論文 23.04M |
 | EfficientNet-B0 projection 內部結構 | ⚠️ 論文只給不透明方塊，用 depthwise conv + Squeeze-Excite 近似 |
-| ImageNet 預訓練 | 初版用真實 EfficientNet-B0 權重 + Transformer 隨機初始化；後續已改為完整 ImageNet-1k from-scratch 預訓練，比照論文 Section III.B.5 |
+| ImageNet 預訓練 | 初版用真實 EfficientNet-B0 權重 + Transformer 隨機初始化；後續已改為完整 ImageNet-1k from-scratch 預訓練，比照論文 Section III.B.5。**目前訓練中：epoch 46/50，val top1=64.0%、top5=85.0%**（進度持續更新，完成後會用此權重重新微調三個作物資料集並更新下方結果表） |
 | cassava 的 SMOTE 過採樣 | ⚠️ 改用 class-weighted loss（SMOTE 定義的特徵空間論文未說明） |
 
 ## 結果對照
