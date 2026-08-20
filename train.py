@@ -64,7 +64,7 @@ def evaluate(model, loader, device, topk=(1, 5)):
     all_preds, all_labels = [], []
     for x, y in loader:
         x, y = x.to(device, non_blocking=True), y.to(device, non_blocking=True)
-        with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=device.type == "cuda"):
+        with torch.autocast(device_type="cuda", dtype=torch.bfloat16, enabled=device.type == "cuda"):
             logits = model(x)
         maxk = max(topk)
         _, pred = logits.topk(maxk, dim=1, largest=True, sorted=True)
@@ -89,12 +89,23 @@ def main():
     ap.add_argument("--num_workers", type=int, default=6)
     ap.add_argument("--out_dir", default=r"C:\Users\Personal\Documents\claude\repro\checkpoints")
     ap.add_argument("--pretrained_effnet", action="store_true", default=True)
-    ap.add_argument("--freeze_stage12", action="store_true", default=True)
+    # NOTE: originally `action="store_true", default=True` -- that combination can
+    # never be turned off from the CLI (store_true only ever sets True; the default
+    # was already True), so --freeze_stage12 was silently unconditional. Fixed to a
+    # real on/off switch.
+    ap.add_argument("--freeze_stage12", dest="freeze_stage12", action="store_true")
+    ap.add_argument("--no_freeze_stage12", dest="freeze_stage12", action="store_false")
+    ap.set_defaults(freeze_stage12=True)
     ap.add_argument("--imagenet_ckpt", default=None,
                      help="Path to a full-model ImageNet-pretrained state_dict (egwt_imagenet_best.pt from "
                           "pretrain_imagenet.py). If given, this replaces the pretrained_effnet compute-budget "
                           "compromise with genuine full-model ImageNet pretraining, matching the paper's own "
                           "protocol (Section III.B.5).")
+    ap.add_argument("--class_weighted_loss", action="store_true",
+                     help="Inverse-frequency class weighting on CrossEntropyLoss -- documented substitute for "
+                          "the paper's SMOTE oversampling (SMOTE's feature space isn't specified), used for "
+                          "cassava's severe class imbalance. Was documented in prepare_cassava.py but never "
+                          "actually wired into the loss until now.")
     args = ap.parse_args()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -116,8 +127,26 @@ def main():
     optimizer = torch.optim.Adam([p for p in model.parameters() if p.requires_grad], lr=args.lr)
     scheduler = torch.optim.lr_scheduler.LambdaLR(
         optimizer, lr_lambda=lambda epoch: max(0.9 ** epoch, 0.1))
-    criterion = nn.CrossEntropyLoss()
-    scaler = torch.amp.GradScaler("cuda", enabled=device.type == "cuda")
+    if args.class_weighted_loss:
+        train_ds = train_loader.dataset
+        counts = torch.bincount(torch.tensor(train_ds.targets), minlength=n_classes).float()
+        weight = (counts.sum() / (n_classes * counts)).to(device)
+        print("class weights:", weight.tolist())
+        criterion = nn.CrossEntropyLoss(weight=weight)
+    else:
+        criterion = nn.CrossEntropyLoss()
+    # bf16 autocast instead of fp16+GradScaler: this model has 646 individual
+    # parameter tensors (G-MHA/G-MLP's per-group nn.ModuleList linears fragment
+    # what would normally be a few large weight matrices into hundreds of small
+    # ones). GradScaler's inf/nan check walks every parameter's gradient tensor
+    # individually each step (a host-device sync per tensor) -- with this many
+    # small tensors that serializes and dominates step time (measured: 30+ min
+    # stuck on a single optimizer.step() call, GPU at 99% util but not actually
+    # progressing -- the same "high util, low real throughput" fragmented-kernel
+    # signature diagnosed for ConViTX's 16-head attention earlier in this
+    # project). bf16 has fp32's exponent range so it never needs loss scaling,
+    # which removes GradScaler and this bottleneck entirely. Safe on this GPU
+    # (RTX 4070 Ti / Ada Lovelace, confirmed bf16-capable).
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -132,12 +161,11 @@ def main():
         for x, y in train_loader:
             x, y = x.to(device, non_blocking=True), y.to(device, non_blocking=True)
             optimizer.zero_grad(set_to_none=True)
-            with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=device.type == "cuda"):
+            with torch.autocast(device_type="cuda", dtype=torch.bfloat16, enabled=device.type == "cuda"):
                 logits = model(x)
                 loss = criterion(logits, y)
-            scaler.scale(loss).backward()
-            scaler.step(optimizer)
-            scaler.update()
+            loss.backward()
+            optimizer.step()
             running_loss += loss.item()
             n_batches += 1
         scheduler.step()

@@ -9,8 +9,8 @@ import random
 import shutil
 from pathlib import Path
 
-SRC = Path(r"\\wsl.localhost\Ubuntu\home\fishlord\dataset\plantvillage dataset\color")
-DST = Path(r"C:\Users\Personal\Documents\claude\repro\data\plantvillage")
+SRC = Path(r"E:\plant_disease\PlantVillage_full")
+DST = Path(r"E:\plant_disease\egwt-reproduction\data\plantvillage")
 SEED = 42
 TRAIN_RATIO = 0.85
 
