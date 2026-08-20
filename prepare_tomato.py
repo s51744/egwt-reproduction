@@ -9,9 +9,9 @@ import shutil
 import random
 from pathlib import Path
 
-SRC_TRAIN = Path(r"C:\Users\Personal\Documents\claude\repro\data\tomato_raw\train")
-SRC_VALID = Path(r"C:\Users\Personal\Documents\claude\repro\data\tomato_raw\valid")
-DST = Path(r"C:\Users\Personal\Documents\claude\repro\data\tomato")
+SRC_TRAIN = Path(r"E:\plant_disease\tomato_download\train")
+SRC_VALID = Path(r"E:\plant_disease\tomato_download\valid")
+DST = Path(r"E:\plant_disease\egwt-reproduction\data\tomato")
 SEED = 42
 TRAIN_RATIO = 0.85
 
