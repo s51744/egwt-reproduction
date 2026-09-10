@@ -1,0 +1,14 @@
+{
+  "dataset": "tomato",
+  "freeze_mode": "head_only",
+  "n_classes": 11,
+  "best_top1": 0.8860655737704918,
+  "final_top1": 0.8846311475409836,
+  "final_top5": 0.9954918032786885,
+  "final_precision_macro": 0.8885799930150194,
+  "final_recall_macro": 0.8864543795897287,
+  "final_f1_macro": 0.8852683256298369,
+  "total_params_M": 19.849124,
+  "trainable_params_M": 0.011275,
+  "epochs_run": 40
+}

@@ -1,0 +1,14 @@
+{
+  "dataset": "plantvillage",
+  "freeze_mode": "head_only",
+  "n_classes": 38,
+  "best_top1": 0.9738521973974957,
+  "final_top1": 0.9738521973974957,
+  "final_top5": 0.9990179229069482,
+  "final_precision_macro": 0.9680994827555967,
+  "final_recall_macro": 0.9675833480040058,
+  "final_f1_macro": 0.9669294495732952,
+  "total_params_M": 19.876799,
+  "trainable_params_M": 0.03895,
+  "epochs_run": 40
+}

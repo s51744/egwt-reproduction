@@ -1,0 +1,14 @@
+{
+  "dataset": "cassava",
+  "freeze_mode": "stage12",
+  "n_classes": 5,
+  "best_top1": 0.7140186915887851,
+  "final_top1": 0.6915887850467289,
+  "final_top5": 1.0,
+  "final_precision_macro": 0.5006064655772374,
+  "final_recall_macro": 0.46261580079056797,
+  "final_f1_macro": 0.47253058352898847,
+  "total_params_M": 19.842974,
+  "trainable_params_M": 17.455749,
+  "epochs_run": 40
+}

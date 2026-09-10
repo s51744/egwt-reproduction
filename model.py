@@ -274,11 +274,25 @@ class EGWT(nn.Module):
         return self.head(pooled)
 
     def freeze_stage12(self):
-        """Per the paper's fine-tuning protocol (Section IV.C): freeze stage 1 & 2,
+        """Reading A of the paper's fine-tuning protocol: freeze stage 1 & 2,
         fine-tune from stage 3 onward."""
         for p in self.stage1.parameters():
             p.requires_grad = False
         for p in self.stage2.parameters():
+            p.requires_grad = False
+
+    def freeze_all_but_head(self):
+        """Reading B of the paper's fine-tuning protocol (transfer-learning section):
+        'other than the final linear classification layer, all other layers of the
+        network are frozen' -- freeze stage1, stage2, stage3, and the pre-head norm,
+        leaving only self.head trainable."""
+        for p in self.stage1.parameters():
+            p.requires_grad = False
+        for p in self.stage2.parameters():
+            p.requires_grad = False
+        for p in self.stage3.parameters():
+            p.requires_grad = False
+        for p in self.norm.parameters():
             p.requires_grad = False
 
 
