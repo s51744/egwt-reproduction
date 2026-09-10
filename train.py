@@ -87,15 +87,14 @@ def main():
     ap.add_argument("--batch_size", type=int, default=64)
     ap.add_argument("--lr", type=float, default=1e-3)
     ap.add_argument("--num_workers", type=int, default=6)
-    ap.add_argument("--out_dir", default=r"C:\Users\Personal\Documents\claude\repro\checkpoints")
+    ap.add_argument("--out_dir", default="runs")
     ap.add_argument("--pretrained_effnet", action="store_true", default=True)
-    # NOTE: originally `action="store_true", default=True` -- that combination can
-    # never be turned off from the CLI (store_true only ever sets True; the default
-    # was already True), so --freeze_stage12 was silently unconditional. Fixed to a
-    # real on/off switch.
-    ap.add_argument("--freeze_stage12", dest="freeze_stage12", action="store_true")
-    ap.add_argument("--no_freeze_stage12", dest="freeze_stage12", action="store_false")
-    ap.set_defaults(freeze_stage12=True)
+    # Two competing readings of the paper's fine-tuning protocol, both reproduced for
+    # comparison: "stage12" freezes stage1+2 only (stage3+head trainable); "head_only"
+    # freezes everything but the final linear layer (paper's transfer-learning section,
+    # verbatim); "none" is full fine-tuning (no freeze) -- kept as the pre-existing
+    # baseline this repo already had results for.
+    ap.add_argument("--freeze_mode", choices=["none", "stage12", "head_only"], default="stage12")
     ap.add_argument("--imagenet_ckpt", default=None,
                      help="Path to a full-model ImageNet-pretrained state_dict (egwt_imagenet_best.pt from "
                           "pretrain_imagenet.py). If given, this replaces the pretrained_effnet compute-budget "
@@ -120,8 +119,10 @@ def main():
         print(f"Loaded full ImageNet-pretrained weights from {args.imagenet_ckpt}")
     else:
         model = EGWT(num_classes=n_classes, pretrained_effnet=args.pretrained_effnet).to(device)
-    if args.freeze_stage12:
+    if args.freeze_mode == "stage12":
         model.freeze_stage12()
+    elif args.freeze_mode == "head_only":
+        model.freeze_all_but_head()
     print(f"Total params: {count_params(model)/1e6:.2f}M, trainable: {count_params(model, True)/1e6:.2f}M")
 
     optimizer = torch.optim.Adam([p for p in model.parameters() if p.requires_grad], lr=args.lr)
@@ -150,7 +151,8 @@ def main():
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    log_path = out_dir / f"egwt_{args.dataset_name}_log.jsonl"
+    run_tag = f"{args.dataset_name}_{args.freeze_mode}"
+    log_path = out_dir / f"egwt_{run_tag}_log.jsonl"
     best_acc = 0.0
     history = []
 
@@ -180,25 +182,25 @@ def main():
         history.append(rec)
         with open(log_path, "a") as f:
             f.write(json.dumps(rec) + "\n")
-        print(f"[{args.dataset_name}] epoch {epoch}: loss={rec['train_loss']:.4f} "
+        print(f"[{run_tag}] epoch {epoch}: loss={rec['train_loss']:.4f} "
               f"top1={acc[1]*100:.2f}% top5={acc.get(5,0)*100:.2f}% time={elapsed:.1f}s")
 
         if acc[1] > best_acc:
             best_acc = acc[1]
-            torch.save(model.state_dict(), out_dir / f"egwt_{args.dataset_name}_best.pt")
+            torch.save(model.state_dict(), out_dir / f"egwt_{run_tag}_best.pt")
 
     # final metrics: precision/recall/f1 (macro) from the last epoch's predictions
     from sklearn.metrics import precision_recall_fscore_support
     p, r, f1, _ = precision_recall_fscore_support(labels.numpy(), preds.numpy(), average="macro", zero_division=0)
     summary = {
-        "dataset": args.dataset_name, "n_classes": n_classes,
+        "dataset": args.dataset_name, "freeze_mode": args.freeze_mode, "n_classes": n_classes,
         "best_top1": best_acc, "final_top1": acc[1], "final_top5": acc.get(5, None),
         "final_precision_macro": p, "final_recall_macro": r, "final_f1_macro": f1,
         "total_params_M": count_params(model) / 1e6,
         "trainable_params_M": count_params(model, True) / 1e6,
         "epochs_run": args.epochs,
     }
-    with open(out_dir / f"egwt_{args.dataset_name}_summary.json", "w") as f:
+    with open(out_dir / f"egwt_{run_tag}_summary.json", "w") as f:
         json.dump(summary, f, indent=2)
     print("SUMMARY:", json.dumps(summary, indent=2))
 

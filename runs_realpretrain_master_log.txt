@@ -1,0 +1,513 @@
+﻿[plantvillage] classes=38 train_batches=721 test_batches=128
+Loaded full ImageNet-pretrained weights from checkpoints/imagenet_pretrain/egwt_imagenet_best.pt
+Total params: 19.88M, trainable: 19.88M
+[plantvillage_none] epoch 0: loss=0.1772 top1=97.24% top5=99.96% time=323.7s
+[plantvillage_none] epoch 1: loss=0.0359 top1=97.34% top5=99.96% time=289.5s
+[plantvillage_none] epoch 2: loss=0.0242 top1=98.85% top5=99.99% time=288.7s
+[plantvillage_none] epoch 3: loss=0.0191 top1=98.92% top5=99.96% time=288.7s
+[plantvillage_none] epoch 4: loss=0.0145 top1=98.76% top5=99.96% time=288.9s
+[plantvillage_none] epoch 5: loss=0.0111 top1=99.03% top5=99.99% time=288.9s
+[plantvillage_none] epoch 6: loss=0.0078 top1=98.69% top5=99.93% time=289.9s
+[plantvillage_none] epoch 7: loss=0.0086 top1=99.37% top5=99.98% time=289.9s
+[plantvillage_none] epoch 8: loss=0.0061 top1=99.30% top5=99.99% time=289.6s
+[plantvillage_none] epoch 9: loss=0.0041 top1=99.26% top5=99.99% time=289.7s
+[plantvillage_none] epoch 10: loss=0.0056 top1=99.45% top5=99.99% time=289.4s
+[plantvillage_none] epoch 11: loss=0.0035 top1=99.62% top5=100.00% time=289.5s
+[plantvillage_none] epoch 12: loss=0.0029 top1=99.47% top5=99.98% time=289.8s
+[plantvillage_none] epoch 13: loss=0.0030 top1=99.20% top5=99.99% time=290.5s
+[plantvillage_none] epoch 14: loss=0.0025 top1=99.44% top5=100.00% time=291.0s
+[plantvillage_none] epoch 15: loss=0.0016 top1=99.50% top5=100.00% time=290.7s
+[plantvillage_none] epoch 16: loss=0.0014 top1=99.63% top5=100.00% time=290.5s
+[plantvillage_none] epoch 17: loss=0.0008 top1=99.40% top5=100.00% time=291.0s
+[plantvillage_none] epoch 18: loss=0.0007 top1=99.51% top5=100.00% time=290.9s
+[plantvillage_none] epoch 19: loss=0.0022 top1=99.39% top5=99.99% time=290.8s
+[plantvillage_none] epoch 20: loss=0.0010 top1=99.52% top5=100.00% time=291.0s
+[plantvillage_none] epoch 21: loss=0.0005 top1=99.52% top5=99.99% time=290.7s
+[plantvillage_none] epoch 22: loss=0.0003 top1=99.55% top5=100.00% time=290.0s
+[plantvillage_none] epoch 23: loss=0.0010 top1=99.67% top5=100.00% time=288.6s
+[plantvillage_none] epoch 24: loss=0.0005 top1=99.59% top5=100.00% time=290.1s
+[plantvillage_none] epoch 25: loss=0.0002 top1=99.67% top5=100.00% time=291.1s
+[plantvillage_none] epoch 26: loss=0.0005 top1=99.67% top5=100.00% time=290.8s
+[plantvillage_none] epoch 27: loss=0.0005 top1=99.71% top5=100.00% time=290.7s
+[plantvillage_none] epoch 28: loss=0.0009 top1=99.73% top5=100.00% time=290.8s
+[plantvillage_none] epoch 29: loss=0.0006 top1=99.69% top5=99.99% time=289.8s
+[plantvillage_none] epoch 30: loss=0.0008 top1=99.74% top5=99.99% time=291.0s
+[plantvillage_none] epoch 31: loss=0.0002 top1=99.73% top5=100.00% time=290.8s
+[plantvillage_none] epoch 32: loss=0.0003 top1=99.75% top5=100.00% time=290.7s
+[plantvillage_none] epoch 33: loss=0.0003 top1=99.77% top5=100.00% time=290.8s
+[plantvillage_none] epoch 34: loss=0.0006 top1=99.44% top5=100.00% time=290.1s
+[plantvillage_none] epoch 35: loss=0.0003 top1=99.64% top5=100.00% time=289.8s
+[plantvillage_none] epoch 36: loss=0.0004 top1=99.73% top5=100.00% time=291.3s
+[plantvillage_none] epoch 37: loss=0.0004 top1=99.68% top5=100.00% time=291.1s
+[plantvillage_none] epoch 38: loss=0.0004 top1=99.71% top5=100.00% time=292.0s
+[plantvillage_none] epoch 39: loss=0.0006 top1=99.62% top5=100.00% time=291.7s
+SUMMARY: {
+  "dataset": "plantvillage",
+  "freeze_mode": "none",
+  "n_classes": 38,
+  "best_top1": 0.9976675669040019,
+  "final_top1": 0.9961944512644243,
+  "final_top5": 1.0,
+  "final_precision_macro": 0.9962698598426009,
+  "final_recall_macro": 0.9941041542443912,
+  "final_f1_macro": 0.9950343047205799,
+  "total_params_M": 19.876799,
+  "trainable_params_M": 19.876799,
+  "epochs_run": 40
+}
+[cassava] classes=5 train_batches=284 test_batches=51
+Loaded full ImageNet-pretrained weights from checkpoints/imagenet_pretrain/egwt_imagenet_best.pt
+Total params: 19.84M, trainable: 19.84M
+[cassava_none] epoch 0: loss=0.6630 top1=80.78% top5=100.00% time=155.8s
+[cassava_none] epoch 1: loss=0.5031 top1=83.99% top5=100.00% time=120.3s
+[cassava_none] epoch 2: loss=0.4642 top1=82.96% top5=100.00% time=119.3s
+[cassava_none] epoch 3: loss=0.4286 top1=83.33% top5=100.00% time=119.6s
+[cassava_none] epoch 4: loss=0.4003 top1=84.02% top5=100.00% time=120.4s
+[cassava_none] epoch 5: loss=0.3706 top1=84.58% top5=100.00% time=119.6s
+[cassava_none] epoch 6: loss=0.3397 top1=84.14% top5=100.00% time=119.2s
+[cassava_none] epoch 7: loss=0.3119 top1=84.30% top5=100.00% time=120.0s
+[cassava_none] epoch 8: loss=0.2880 top1=84.17% top5=100.00% time=119.2s
+[cassava_none] epoch 9: loss=0.2571 top1=83.96% top5=100.00% time=119.7s
+[cassava_none] epoch 10: loss=0.2343 top1=83.43% top5=100.00% time=119.4s
+[cassava_none] epoch 11: loss=0.2074 top1=83.24% top5=100.00% time=119.1s
+[cassava_none] epoch 12: loss=0.1899 top1=83.64% top5=100.00% time=120.6s
+[cassava_none] epoch 13: loss=0.1618 top1=83.24% top5=100.00% time=119.3s
+[cassava_none] epoch 14: loss=0.1509 top1=82.90% top5=100.00% time=119.6s
+[cassava_none] epoch 15: loss=0.1360 top1=82.96% top5=100.00% time=119.1s
+[cassava_none] epoch 16: loss=0.1249 top1=83.27% top5=100.00% time=118.2s
+[cassava_none] epoch 17: loss=0.1164 top1=83.05% top5=100.00% time=118.3s
+[cassava_none] epoch 18: loss=0.1078 top1=83.49% top5=100.00% time=118.2s
+[cassava_none] epoch 19: loss=0.0978 top1=83.68% top5=100.00% time=118.4s
+[cassava_none] epoch 20: loss=0.0875 top1=82.77% top5=100.00% time=118.2s
+[cassava_none] epoch 21: loss=0.0895 top1=82.46% top5=100.00% time=118.2s
+[cassava_none] epoch 22: loss=0.0849 top1=82.65% top5=100.00% time=118.1s
+[cassava_none] epoch 23: loss=0.0746 top1=83.52% top5=100.00% time=118.3s
+[cassava_none] epoch 24: loss=0.0745 top1=83.33% top5=100.00% time=118.0s
+[cassava_none] epoch 25: loss=0.0733 top1=83.21% top5=100.00% time=118.4s
+[cassava_none] epoch 26: loss=0.0702 top1=82.71% top5=100.00% time=118.1s
+[cassava_none] epoch 27: loss=0.0686 top1=83.49% top5=100.00% time=118.1s
+[cassava_none] epoch 28: loss=0.0658 top1=82.18% top5=100.00% time=118.1s
+[cassava_none] epoch 29: loss=0.0671 top1=82.99% top5=100.00% time=118.3s
+[cassava_none] epoch 30: loss=0.0619 top1=83.15% top5=100.00% time=118.1s
+[cassava_none] epoch 31: loss=0.0568 top1=83.12% top5=100.00% time=119.1s
+[cassava_none] epoch 32: loss=0.0630 top1=83.05% top5=100.00% time=118.4s
+[cassava_none] epoch 33: loss=0.0537 top1=83.40% top5=100.00% time=118.2s
+[cassava_none] epoch 34: loss=0.0514 top1=83.43% top5=100.00% time=118.4s
+[cassava_none] epoch 35: loss=0.0517 top1=83.80% top5=100.00% time=118.1s
+[cassava_none] epoch 36: loss=0.0485 top1=83.30% top5=100.00% time=119.7s
+[cassava_none] epoch 37: loss=0.0521 top1=83.71% top5=100.00% time=119.8s
+[cassava_none] epoch 38: loss=0.0440 top1=83.36% top5=100.00% time=120.8s
+[cassava_none] epoch 39: loss=0.0435 top1=83.89% top5=100.00% time=119.3s
+SUMMARY: {
+  "dataset": "cassava",
+  "freeze_mode": "none",
+  "n_classes": 5,
+  "best_top1": 0.8457943925233645,
+  "final_top1": 0.8389408099688473,
+  "final_top5": 1.0,
+  "final_precision_macro": 0.7216892148338099,
+  "final_recall_macro": 0.7125968361021616,
+  "final_f1_macro": 0.7159900003247154,
+  "total_params_M": 19.842974,
+  "trainable_params_M": 19.842974,
+  "epochs_run": 40
+}
+[tomato] classes=11 train_batches=432 test_batches=77
+Loaded full ImageNet-pretrained weights from checkpoints/imagenet_pretrain/egwt_imagenet_best.pt
+Total params: 19.85M, trainable: 19.85M
+[tomato_none] epoch 0: loss=0.3102 top1=92.25% top5=99.82% time=213.4s
+[tomato_none] epoch 1: loss=0.0858 top1=95.98% top5=99.90% time=174.5s
+[tomato_none] epoch 2: loss=0.0504 top1=96.58% top5=99.92% time=174.1s
+[tomato_none] epoch 3: loss=0.0388 top1=96.43% top5=99.90% time=174.3s
+[tomato_none] epoch 4: loss=0.0241 top1=96.31% top5=99.94% time=174.6s
+[tomato_none] epoch 5: loss=0.0175 top1=98.09% top5=99.92% time=174.4s
+[tomato_none] epoch 6: loss=0.0150 top1=98.55% top5=99.90% time=174.3s
+[tomato_none] epoch 7: loss=0.0131 top1=97.70% top5=99.86% time=174.2s
+[tomato_none] epoch 8: loss=0.0122 top1=98.55% top5=99.88% time=174.3s
+[tomato_none] epoch 9: loss=0.0114 top1=98.73% top5=99.90% time=173.5s
+[tomato_none] epoch 10: loss=0.0068 top1=98.24% top5=99.94% time=173.5s
+[tomato_none] epoch 11: loss=0.0079 top1=98.71% top5=99.90% time=173.5s
+[tomato_none] epoch 12: loss=0.0062 top1=98.55% top5=99.94% time=173.7s
+[tomato_none] epoch 13: loss=0.0052 top1=98.89% top5=99.92% time=174.2s
+[tomato_none] epoch 14: loss=0.0051 top1=98.85% top5=99.90% time=176.1s
+[tomato_none] epoch 15: loss=0.0045 top1=98.34% top5=99.86% time=175.6s
+[tomato_none] epoch 16: loss=0.0030 top1=98.98% top5=99.90% time=174.9s
+[tomato_none] epoch 17: loss=0.0050 top1=98.69% top5=99.90% time=174.8s
+[tomato_none] epoch 18: loss=0.0041 top1=98.89% top5=99.92% time=174.8s
+[tomato_none] epoch 19: loss=0.0036 top1=98.83% top5=99.90% time=175.0s
+[tomato_none] epoch 20: loss=0.0029 top1=98.69% top5=99.88% time=174.8s
+[tomato_none] epoch 21: loss=0.0026 top1=98.77% top5=99.88% time=175.0s
+[tomato_none] epoch 22: loss=0.0031 top1=98.40% top5=99.88% time=174.9s
+[tomato_none] epoch 23: loss=0.0026 top1=98.73% top5=99.90% time=173.6s
+[tomato_none] epoch 24: loss=0.0026 top1=98.79% top5=99.90% time=173.6s
+[tomato_none] epoch 25: loss=0.0037 top1=98.67% top5=99.88% time=173.6s
+[tomato_none] epoch 26: loss=0.0023 top1=98.67% top5=99.88% time=173.4s
+[tomato_none] epoch 27: loss=0.0025 top1=98.65% top5=99.92% time=173.5s
+[tomato_none] epoch 28: loss=0.0027 top1=98.67% top5=99.90% time=173.3s
+[tomato_none] epoch 29: loss=0.0025 top1=98.46% top5=99.90% time=173.3s
+[tomato_none] epoch 30: loss=0.0027 top1=98.52% top5=99.92% time=173.3s
+[tomato_none] epoch 31: loss=0.0021 top1=98.71% top5=99.92% time=173.7s
+[tomato_none] epoch 32: loss=0.0026 top1=98.55% top5=99.88% time=173.7s
+[tomato_none] epoch 33: loss=0.0029 top1=97.99% top5=99.90% time=173.5s
+[tomato_none] epoch 34: loss=0.0028 top1=98.77% top5=99.92% time=173.3s
+[tomato_none] epoch 35: loss=0.0022 top1=98.87% top5=99.88% time=173.4s
+[tomato_none] epoch 36: loss=0.0023 top1=98.81% top5=99.90% time=173.5s
+[tomato_none] epoch 37: loss=0.0030 top1=98.91% top5=99.90% time=173.4s
+[tomato_none] epoch 38: loss=0.0020 top1=98.89% top5=99.90% time=174.5s
+[tomato_none] epoch 39: loss=0.0025 top1=98.67% top5=99.88% time=175.9s
+SUMMARY: {
+  "dataset": "tomato",
+  "freeze_mode": "none",
+  "n_classes": 11,
+  "best_top1": 0.9897540983606558,
+  "final_top1": 0.9866803278688525,
+  "final_top5": 0.9987704918032787,
+  "final_precision_macro": 0.9867511277938337,
+  "final_recall_macro": 0.9869799357968865,
+  "final_f1_macro": 0.9867717340315555,
+  "total_params_M": 19.849124,
+  "trainable_params_M": 19.849124,
+  "epochs_run": 40
+}
+[plantvillage] classes=38 train_batches=721 test_batches=128
+Loaded full ImageNet-pretrained weights from checkpoints/imagenet_pretrain/egwt_imagenet_best.pt
+Total params: 19.88M, trainable: 17.49M
+[plantvillage_stage12] epoch 0: loss=0.1986 top1=97.69% top5=99.93% time=151.9s
+[plantvillage_stage12] epoch 1: loss=0.0385 top1=98.26% top5=99.95% time=121.1s
+[plantvillage_stage12] epoch 2: loss=0.0244 top1=98.33% top5=99.98% time=120.7s
+[plantvillage_stage12] epoch 3: loss=0.0187 top1=98.28% top5=99.95% time=120.9s
+[plantvillage_stage12] epoch 4: loss=0.0135 top1=98.39% top5=99.98% time=121.0s
+[plantvillage_stage12] epoch 5: loss=0.0104 top1=98.99% top5=99.98% time=120.8s
+[plantvillage_stage12] epoch 6: loss=0.0097 top1=98.60% top5=99.96% time=121.1s
+[plantvillage_stage12] epoch 7: loss=0.0080 top1=98.50% top5=99.93% time=120.9s
+[plantvillage_stage12] epoch 8: loss=0.0057 top1=98.99% top5=99.94% time=120.7s
+[plantvillage_stage12] epoch 9: loss=0.0059 top1=99.19% top5=99.98% time=121.1s
+[plantvillage_stage12] epoch 10: loss=0.0047 top1=99.30% top5=99.98% time=120.9s
+[plantvillage_stage12] epoch 11: loss=0.0033 top1=99.39% top5=99.98% time=121.4s
+[plantvillage_stage12] epoch 12: loss=0.0034 top1=99.25% top5=99.96% time=122.3s
+[plantvillage_stage12] epoch 13: loss=0.0031 top1=99.23% top5=99.99% time=121.4s
+[plantvillage_stage12] epoch 14: loss=0.0023 top1=99.20% top5=99.98% time=121.7s
+[plantvillage_stage12] epoch 15: loss=0.0022 top1=99.03% top5=99.96% time=120.7s
+[plantvillage_stage12] epoch 16: loss=0.0017 top1=99.56% top5=99.96% time=120.8s
+[plantvillage_stage12] epoch 17: loss=0.0020 top1=99.40% top5=99.96% time=120.7s
+[plantvillage_stage12] epoch 18: loss=0.0014 top1=99.34% top5=99.99% time=120.7s
+[plantvillage_stage12] epoch 19: loss=0.0010 top1=99.50% top5=99.98% time=121.5s
+[plantvillage_stage12] epoch 20: loss=0.0011 top1=99.45% top5=99.98% time=120.6s
+[plantvillage_stage12] epoch 21: loss=0.0007 top1=99.46% top5=100.00% time=121.4s
+[plantvillage_stage12] epoch 22: loss=0.0010 top1=99.63% top5=99.99% time=121.2s
+[plantvillage_stage12] epoch 23: loss=0.0010 top1=99.56% top5=99.99% time=120.6s
+[plantvillage_stage12] epoch 24: loss=0.0010 top1=99.41% top5=99.96% time=121.0s
+[plantvillage_stage12] epoch 25: loss=0.0007 top1=99.44% top5=99.98% time=121.1s
+[plantvillage_stage12] epoch 26: loss=0.0005 top1=99.55% top5=99.96% time=121.0s
+[plantvillage_stage12] epoch 27: loss=0.0007 top1=99.57% top5=99.98% time=120.8s
+[plantvillage_stage12] epoch 28: loss=0.0003 top1=99.56% top5=99.99% time=120.7s
+[plantvillage_stage12] epoch 29: loss=0.0007 top1=99.62% top5=99.98% time=120.7s
+[plantvillage_stage12] epoch 30: loss=0.0006 top1=99.59% top5=99.98% time=120.6s
+[plantvillage_stage12] epoch 31: loss=0.0006 top1=99.59% top5=99.98% time=120.7s
+[plantvillage_stage12] epoch 32: loss=0.0009 top1=99.47% top5=99.99% time=120.7s
+[plantvillage_stage12] epoch 33: loss=0.0008 top1=99.55% top5=99.98% time=120.9s
+[plantvillage_stage12] epoch 34: loss=0.0006 top1=99.64% top5=99.99% time=120.7s
+[plantvillage_stage12] epoch 35: loss=0.0008 top1=99.63% top5=99.99% time=120.7s
+[plantvillage_stage12] epoch 36: loss=0.0008 top1=99.64% top5=99.99% time=120.7s
+[plantvillage_stage12] epoch 37: loss=0.0005 top1=99.47% top5=99.98% time=120.8s
+[plantvillage_stage12] epoch 38: loss=0.0003 top1=99.52% top5=99.99% time=120.8s
+[plantvillage_stage12] epoch 39: loss=0.0005 top1=99.47% top5=99.99% time=120.7s
+SUMMARY: {
+  "dataset": "plantvillage",
+  "freeze_mode": "stage12",
+  "n_classes": 38,
+  "best_top1": 0.9964399705376872,
+  "final_top1": 0.9947213356248465,
+  "final_top5": 0.9998772403633686,
+  "final_precision_macro": 0.992411072034023,
+  "final_recall_macro": 0.9936757938364217,
+  "final_f1_macro": 0.9929545531004266,
+  "total_params_M": 19.876799,
+  "trainable_params_M": 17.489574,
+  "epochs_run": 40
+}
+[cassava] classes=5 train_batches=284 test_batches=51
+Loaded full ImageNet-pretrained weights from checkpoints/imagenet_pretrain/egwt_imagenet_best.pt
+Total params: 19.84M, trainable: 17.46M
+[cassava_stage12] epoch 0: loss=0.6825 top1=80.40% top5=100.00% time=94.2s
+[cassava_stage12] epoch 1: loss=0.5387 top1=82.09% top5=100.00% time=63.2s
+[cassava_stage12] epoch 2: loss=0.4898 top1=81.25% top5=100.00% time=63.4s
+[cassava_stage12] epoch 3: loss=0.4446 top1=81.56% top5=100.00% time=63.6s
+[cassava_stage12] epoch 4: loss=0.4150 top1=81.34% top5=100.00% time=63.8s
+[cassava_stage12] epoch 5: loss=0.3853 top1=81.37% top5=100.00% time=63.7s
+[cassava_stage12] epoch 6: loss=0.3533 top1=81.90% top5=100.00% time=63.7s
+[cassava_stage12] epoch 7: loss=0.3141 top1=82.09% top5=100.00% time=63.7s
+[cassava_stage12] epoch 8: loss=0.3005 top1=80.62% top5=100.00% time=64.3s
+[cassava_stage12] epoch 9: loss=0.2751 top1=80.12% top5=100.00% time=63.3s
+[cassava_stage12] epoch 10: loss=0.2497 top1=80.90% top5=100.00% time=63.0s
+[cassava_stage12] epoch 11: loss=0.2396 top1=81.56% top5=100.00% time=63.9s
+[cassava_stage12] epoch 12: loss=0.2132 top1=80.44% top5=100.00% time=63.0s
+[cassava_stage12] epoch 13: loss=0.2017 top1=80.75% top5=100.00% time=64.2s
+[cassava_stage12] epoch 14: loss=0.1842 top1=81.00% top5=100.00% time=63.3s
+[cassava_stage12] epoch 15: loss=0.1676 top1=80.62% top5=100.00% time=63.1s
+[cassava_stage12] epoch 16: loss=0.1598 top1=80.28% top5=100.00% time=64.7s
+[cassava_stage12] epoch 17: loss=0.1524 top1=80.84% top5=100.00% time=63.4s
+[cassava_stage12] epoch 18: loss=0.1494 top1=80.40% top5=100.00% time=62.9s
+[cassava_stage12] epoch 19: loss=0.1388 top1=80.93% top5=100.00% time=64.1s
+[cassava_stage12] epoch 20: loss=0.1327 top1=80.44% top5=100.00% time=62.6s
+[cassava_stage12] epoch 21: loss=0.1274 top1=80.44% top5=100.00% time=63.1s
+[cassava_stage12] epoch 22: loss=0.1224 top1=80.78% top5=100.00% time=63.6s
+[cassava_stage12] epoch 23: loss=0.1221 top1=80.47% top5=100.00% time=63.0s
+[cassava_stage12] epoch 24: loss=0.1189 top1=80.56% top5=100.00% time=63.0s
+[cassava_stage12] epoch 25: loss=0.1105 top1=80.93% top5=100.00% time=63.8s
+[cassava_stage12] epoch 26: loss=0.1147 top1=81.31% top5=100.00% time=63.0s
+[cassava_stage12] epoch 27: loss=0.1128 top1=81.34% top5=100.00% time=62.3s
+[cassava_stage12] epoch 28: loss=0.1050 top1=81.25% top5=100.00% time=63.9s
+[cassava_stage12] epoch 29: loss=0.1008 top1=81.12% top5=100.00% time=62.7s
+[cassava_stage12] epoch 30: loss=0.1025 top1=80.90% top5=100.00% time=63.4s
+[cassava_stage12] epoch 31: loss=0.1011 top1=80.69% top5=100.00% time=63.8s
+[cassava_stage12] epoch 32: loss=0.0979 top1=81.06% top5=100.00% time=62.8s
+[cassava_stage12] epoch 33: loss=0.0967 top1=80.97% top5=100.00% time=63.4s
+[cassava_stage12] epoch 34: loss=0.0939 top1=81.21% top5=100.00% time=63.0s
+[cassava_stage12] epoch 35: loss=0.0902 top1=80.84% top5=100.00% time=62.8s
+[cassava_stage12] epoch 36: loss=0.0875 top1=80.69% top5=100.00% time=63.9s
+[cassava_stage12] epoch 37: loss=0.0858 top1=80.84% top5=100.00% time=63.2s
+[cassava_stage12] epoch 38: loss=0.0826 top1=80.78% top5=100.00% time=63.0s
+[cassava_stage12] epoch 39: loss=0.0805 top1=80.97% top5=100.00% time=63.5s
+SUMMARY: {
+  "dataset": "cassava",
+  "freeze_mode": "stage12",
+  "n_classes": 5,
+  "best_top1": 0.8208722741433022,
+  "final_top1": 0.8096573208722742,
+  "final_top5": 1.0,
+  "final_precision_macro": 0.6800137493706725,
+  "final_recall_macro": 0.6714547452892217,
+  "final_f1_macro": 0.6753212091295969,
+  "total_params_M": 19.842974,
+  "trainable_params_M": 17.455749,
+  "epochs_run": 40
+}
+[tomato] classes=11 train_batches=432 test_batches=77
+Loaded full ImageNet-pretrained weights from checkpoints/imagenet_pretrain/egwt_imagenet_best.pt
+Total params: 19.85M, trainable: 17.46M
+[tomato_stage12] epoch 0: loss=0.3473 top1=90.27% top5=99.77% time=102.3s
+[tomato_stage12] epoch 1: loss=0.0920 top1=93.93% top5=99.90% time=72.9s
+[tomato_stage12] epoch 2: loss=0.0521 top1=97.23% top5=99.88% time=72.5s
+[tomato_stage12] epoch 3: loss=0.0366 top1=96.19% top5=99.92% time=72.6s
+[tomato_stage12] epoch 4: loss=0.0276 top1=97.62% top5=99.84% time=72.8s
+[tomato_stage12] epoch 5: loss=0.0195 top1=97.99% top5=99.94% time=72.7s
+[tomato_stage12] epoch 6: loss=0.0153 top1=97.70% top5=99.90% time=73.0s
+[tomato_stage12] epoch 7: loss=0.0139 top1=98.11% top5=99.90% time=72.5s
+[tomato_stage12] epoch 8: loss=0.0133 top1=97.95% top5=99.86% time=72.7s
+[tomato_stage12] epoch 9: loss=0.0088 top1=98.05% top5=99.84% time=72.9s
+[tomato_stage12] epoch 10: loss=0.0087 top1=98.03% top5=99.88% time=72.5s
+[tomato_stage12] epoch 11: loss=0.0090 top1=98.77% top5=99.86% time=73.0s
+[tomato_stage12] epoch 12: loss=0.0076 top1=98.03% top5=99.92% time=72.5s
+[tomato_stage12] epoch 13: loss=0.0063 top1=98.42% top5=99.88% time=72.5s
+[tomato_stage12] epoch 14: loss=0.0059 top1=98.44% top5=99.90% time=73.0s
+[tomato_stage12] epoch 15: loss=0.0057 top1=98.79% top5=99.88% time=72.5s
+[tomato_stage12] epoch 16: loss=0.0043 top1=98.81% top5=99.86% time=72.9s
+[tomato_stage12] epoch 17: loss=0.0048 top1=98.59% top5=99.88% time=72.6s
+[tomato_stage12] epoch 18: loss=0.0040 top1=98.79% top5=99.90% time=72.6s
+[tomato_stage12] epoch 19: loss=0.0037 top1=98.69% top5=99.92% time=73.1s
+[tomato_stage12] epoch 20: loss=0.0031 top1=98.28% top5=99.88% time=72.6s
+[tomato_stage12] epoch 21: loss=0.0036 top1=98.59% top5=99.90% time=72.8s
+[tomato_stage12] epoch 22: loss=0.0042 top1=98.59% top5=99.90% time=72.5s
+[tomato_stage12] epoch 23: loss=0.0035 top1=98.59% top5=99.90% time=72.8s
+[tomato_stage12] epoch 24: loss=0.0028 top1=98.63% top5=99.86% time=72.8s
+[tomato_stage12] epoch 25: loss=0.0037 top1=98.71% top5=99.88% time=72.6s
+[tomato_stage12] epoch 26: loss=0.0028 top1=98.75% top5=99.84% time=72.9s
+[tomato_stage12] epoch 27: loss=0.0032 top1=98.79% top5=99.92% time=72.6s
+[tomato_stage12] epoch 28: loss=0.0029 top1=98.91% top5=99.92% time=72.9s
+[tomato_stage12] epoch 29: loss=0.0032 top1=98.89% top5=99.92% time=72.6s
+[tomato_stage12] epoch 30: loss=0.0032 top1=98.87% top5=99.88% time=72.5s
+[tomato_stage12] epoch 31: loss=0.0032 top1=98.81% top5=99.86% time=73.1s
+[tomato_stage12] epoch 32: loss=0.0028 top1=98.81% top5=99.84% time=72.6s
+[tomato_stage12] epoch 33: loss=0.0032 top1=98.83% top5=99.86% time=73.2s
+[tomato_stage12] epoch 34: loss=0.0031 top1=98.79% top5=99.86% time=72.6s
+[tomato_stage12] epoch 35: loss=0.0031 top1=98.75% top5=99.88% time=72.6s
+[tomato_stage12] epoch 36: loss=0.0032 top1=98.79% top5=99.88% time=72.9s
+[tomato_stage12] epoch 37: loss=0.0025 top1=98.91% top5=99.96% time=72.5s
+[tomato_stage12] epoch 38: loss=0.0023 top1=98.83% top5=99.88% time=73.1s
+[tomato_stage12] epoch 39: loss=0.0032 top1=98.65% top5=99.86% time=72.6s
+SUMMARY: {
+  "dataset": "tomato",
+  "freeze_mode": "stage12",
+  "n_classes": 11,
+  "best_top1": 0.9891393442622951,
+  "final_top1": 0.9864754098360655,
+  "final_top5": 0.9985655737704918,
+  "final_precision_macro": 0.9870382206404795,
+  "final_recall_macro": 0.9859878051469885,
+  "final_f1_macro": 0.9863909925235833,
+  "total_params_M": 19.849124,
+  "trainable_params_M": 17.461899,
+  "epochs_run": 40
+}
+[plantvillage] classes=38 train_batches=721 test_batches=128
+Loaded full ImageNet-pretrained weights from checkpoints/imagenet_pretrain/egwt_imagenet_best.pt
+Total params: 19.88M, trainable: 0.04M
+[plantvillage_head_only] epoch 0: loss=0.6689 top1=93.08% top5=99.45% time=115.6s
+[plantvillage_head_only] epoch 1: loss=0.2000 top1=94.56% top5=99.58% time=84.8s
+[plantvillage_head_only] epoch 2: loss=0.1430 top1=95.70% top5=99.69% time=85.1s
+[plantvillage_head_only] epoch 3: loss=0.1164 top1=95.95% top5=99.77% time=84.9s
+[plantvillage_head_only] epoch 4: loss=0.1015 top1=96.27% top5=99.73% time=85.0s
+[plantvillage_head_only] epoch 5: loss=0.0901 top1=96.16% top5=99.80% time=85.0s
+[plantvillage_head_only] epoch 6: loss=0.0820 top1=96.87% top5=99.80% time=84.9s
+[plantvillage_head_only] epoch 7: loss=0.0792 top1=96.82% top5=99.86% time=85.2s
+[plantvillage_head_only] epoch 8: loss=0.0722 top1=96.70% top5=99.86% time=84.8s
+[plantvillage_head_only] epoch 9: loss=0.0676 top1=96.53% top5=99.83% time=85.2s
+[plantvillage_head_only] epoch 10: loss=0.0655 top1=96.83% top5=99.86% time=84.9s
+[plantvillage_head_only] epoch 11: loss=0.0647 top1=96.93% top5=99.89% time=85.3s
+[plantvillage_head_only] epoch 12: loss=0.0626 top1=96.94% top5=99.88% time=84.9s
+[plantvillage_head_only] epoch 13: loss=0.0603 top1=96.88% top5=99.89% time=85.2s
+[plantvillage_head_only] epoch 14: loss=0.0592 top1=97.12% top5=99.90% time=88.1s
+[plantvillage_head_only] epoch 15: loss=0.0555 top1=97.14% top5=99.90% time=158.7s
+[plantvillage_head_only] epoch 16: loss=0.0557 top1=97.05% top5=99.88% time=85.3s
+[plantvillage_head_only] epoch 17: loss=0.0564 top1=97.14% top5=99.89% time=84.9s
+[plantvillage_head_only] epoch 18: loss=0.0538 top1=97.04% top5=99.86% time=85.0s
+[plantvillage_head_only] epoch 19: loss=0.0533 top1=97.04% top5=99.90% time=84.9s
+[plantvillage_head_only] epoch 20: loss=0.0529 top1=97.13% top5=99.90% time=84.9s
+[plantvillage_head_only] epoch 21: loss=0.0526 top1=97.27% top5=99.91% time=85.3s
+[plantvillage_head_only] epoch 22: loss=0.0517 top1=97.25% top5=99.90% time=84.9s
+[plantvillage_head_only] epoch 23: loss=0.0535 top1=97.15% top5=99.91% time=85.3s
+[plantvillage_head_only] epoch 24: loss=0.0522 top1=97.29% top5=99.90% time=84.9s
+[plantvillage_head_only] epoch 25: loss=0.0506 top1=97.16% top5=99.90% time=85.2s
+[plantvillage_head_only] epoch 26: loss=0.0509 top1=97.34% top5=99.90% time=84.9s
+[plantvillage_head_only] epoch 27: loss=0.0504 top1=97.18% top5=99.91% time=85.2s
+[plantvillage_head_only] epoch 28: loss=0.0513 top1=97.26% top5=99.88% time=84.9s
+[plantvillage_head_only] epoch 29: loss=0.0498 top1=97.35% top5=99.89% time=85.2s
+[plantvillage_head_only] epoch 30: loss=0.0483 top1=97.31% top5=99.89% time=85.0s
+[plantvillage_head_only] epoch 31: loss=0.0480 top1=97.37% top5=99.90% time=85.2s
+[plantvillage_head_only] epoch 32: loss=0.0480 top1=97.30% top5=99.91% time=84.8s
+[plantvillage_head_only] epoch 33: loss=0.0483 top1=97.36% top5=99.89% time=85.3s
+[plantvillage_head_only] epoch 34: loss=0.0481 top1=97.29% top5=99.90% time=84.9s
+[plantvillage_head_only] epoch 35: loss=0.0462 top1=97.29% top5=99.89% time=84.9s
+[plantvillage_head_only] epoch 36: loss=0.0469 top1=97.36% top5=99.90% time=85.0s
+[plantvillage_head_only] epoch 37: loss=0.0465 top1=97.34% top5=99.91% time=84.9s
+[plantvillage_head_only] epoch 38: loss=0.0477 top1=97.34% top5=99.90% time=85.2s
+[plantvillage_head_only] epoch 39: loss=0.0461 top1=97.39% top5=99.90% time=84.9s
+SUMMARY: {
+  "dataset": "plantvillage",
+  "freeze_mode": "head_only",
+  "n_classes": 38,
+  "best_top1": 0.9738521973974957,
+  "final_top1": 0.9738521973974957,
+  "final_top5": 0.9990179229069482,
+  "final_precision_macro": 0.9680994827555967,
+  "final_recall_macro": 0.9675833480040058,
+  "final_f1_macro": 0.9669294495732952,
+  "total_params_M": 19.876799,
+  "trainable_params_M": 0.03895,
+  "epochs_run": 40
+}
+[cassava] classes=5 train_batches=284 test_batches=51
+Loaded full ImageNet-pretrained weights from checkpoints/imagenet_pretrain/egwt_imagenet_best.pt
+Total params: 19.84M, trainable: 0.01M
+[cassava_head_only] epoch 0: loss=0.8635 top1=73.83% top5=100.00% time=119.4s
+[cassava_head_only] epoch 1: loss=0.7192 top1=75.55% top5=100.00% time=59.6s
+[cassava_head_only] epoch 2: loss=0.6877 top1=76.04% top5=100.00% time=60.8s
+[cassava_head_only] epoch 3: loss=0.6727 top1=76.32% top5=100.00% time=59.3s
+[cassava_head_only] epoch 4: loss=0.6600 top1=76.45% top5=100.00% time=58.5s
+[cassava_head_only] epoch 5: loss=0.6535 top1=77.01% top5=100.00% time=59.9s
+[cassava_head_only] epoch 6: loss=0.6498 top1=76.88% top5=100.00% time=58.4s
+[cassava_head_only] epoch 7: loss=0.6455 top1=76.70% top5=100.00% time=58.7s
+[cassava_head_only] epoch 8: loss=0.6374 top1=77.10% top5=100.00% time=59.9s
+[cassava_head_only] epoch 9: loss=0.6402 top1=76.98% top5=100.00% time=58.9s
+[cassava_head_only] epoch 10: loss=0.6329 top1=77.10% top5=100.00% time=58.3s
+[cassava_head_only] epoch 11: loss=0.6318 top1=77.26% top5=100.00% time=59.8s
+[cassava_head_only] epoch 12: loss=0.6295 top1=77.48% top5=100.00% time=57.9s
+[cassava_head_only] epoch 13: loss=0.6280 top1=77.76% top5=100.00% time=58.7s
+[cassava_head_only] epoch 14: loss=0.6274 top1=77.29% top5=100.00% time=59.6s
+[cassava_head_only] epoch 15: loss=0.6248 top1=77.51% top5=100.00% time=58.9s
+[cassava_head_only] epoch 16: loss=0.6252 top1=77.51% top5=100.00% time=58.6s
+[cassava_head_only] epoch 17: loss=0.6234 top1=77.66% top5=100.00% time=59.9s
+[cassava_head_only] epoch 18: loss=0.6201 top1=77.35% top5=100.00% time=58.5s
+[cassava_head_only] epoch 19: loss=0.6206 top1=77.32% top5=100.00% time=59.0s
+[cassava_head_only] epoch 20: loss=0.6239 top1=77.57% top5=100.00% time=60.1s
+[cassava_head_only] epoch 21: loss=0.6190 top1=77.57% top5=100.00% time=59.0s
+[cassava_head_only] epoch 22: loss=0.6176 top1=77.69% top5=100.00% time=58.7s
+[cassava_head_only] epoch 23: loss=0.6196 top1=77.38% top5=100.00% time=60.0s
+[cassava_head_only] epoch 24: loss=0.6192 top1=77.79% top5=100.00% time=58.5s
+[cassava_head_only] epoch 25: loss=0.6207 top1=77.41% top5=100.00% time=59.0s
+[cassava_head_only] epoch 26: loss=0.6181 top1=77.76% top5=100.00% time=59.9s
+[cassava_head_only] epoch 27: loss=0.6161 top1=77.45% top5=100.00% time=58.6s
+[cassava_head_only] epoch 28: loss=0.6152 top1=77.60% top5=100.00% time=58.5s
+[cassava_head_only] epoch 29: loss=0.6195 top1=77.54% top5=100.00% time=59.4s
+[cassava_head_only] epoch 30: loss=0.6118 top1=77.60% top5=100.00% time=58.6s
+[cassava_head_only] epoch 31: loss=0.6185 top1=77.63% top5=100.00% time=59.0s
+[cassava_head_only] epoch 32: loss=0.6194 top1=77.76% top5=100.00% time=59.7s
+[cassava_head_only] epoch 33: loss=0.6129 top1=77.69% top5=100.00% time=58.4s
+[cassava_head_only] epoch 34: loss=0.6174 top1=77.73% top5=100.00% time=58.8s
+[cassava_head_only] epoch 35: loss=0.6172 top1=77.63% top5=100.00% time=59.5s
+[cassava_head_only] epoch 36: loss=0.6119 top1=77.54% top5=100.00% time=59.1s
+[cassava_head_only] epoch 37: loss=0.6109 top1=77.54% top5=100.00% time=59.0s
+[cassava_head_only] epoch 38: loss=0.6101 top1=77.45% top5=100.00% time=59.1s
+[cassava_head_only] epoch 39: loss=0.6120 top1=77.57% top5=100.00% time=58.7s
+SUMMARY: {
+  "dataset": "cassava",
+  "freeze_mode": "head_only",
+  "n_classes": 5,
+  "best_top1": 0.7778816199376947,
+  "final_top1": 0.7757009345794392,
+  "final_top5": 1.0,
+  "final_precision_macro": 0.6551135144780696,
+  "final_recall_macro": 0.5799092447995788,
+  "final_f1_macro": 0.6082273931414665,
+  "total_params_M": 19.842974,
+  "trainable_params_M": 0.005125,
+  "epochs_run": 40
+}
+[tomato] classes=11 train_batches=432 test_batches=77
+Loaded full ImageNet-pretrained weights from checkpoints/imagenet_pretrain/egwt_imagenet_best.pt
+Total params: 19.85M, trainable: 0.01M
+[tomato_head_only] epoch 0: loss=0.9190 top1=79.55% top5=98.34% time=130.3s
+[tomato_head_only] epoch 1: loss=0.5187 top1=83.26% top5=98.85% time=52.5s
+[tomato_head_only] epoch 2: loss=0.4367 top1=84.18% top5=99.16% time=52.5s
+[tomato_head_only] epoch 3: loss=0.4001 top1=85.61% top5=99.20% time=52.8s
+[tomato_head_only] epoch 4: loss=0.3661 top1=85.98% top5=99.26% time=53.0s
+[tomato_head_only] epoch 5: loss=0.3542 top1=87.05% top5=99.34% time=52.5s
+[tomato_head_only] epoch 6: loss=0.3368 top1=87.03% top5=99.36% time=52.4s
+[tomato_head_only] epoch 7: loss=0.3245 top1=86.95% top5=99.41% time=53.6s
+[tomato_head_only] epoch 8: loss=0.3166 top1=87.07% top5=99.45% time=52.4s
+[tomato_head_only] epoch 9: loss=0.3064 top1=86.93% top5=99.49% time=52.4s
+[tomato_head_only] epoch 10: loss=0.3042 top1=87.46% top5=99.43% time=53.1s
+[tomato_head_only] epoch 11: loss=0.2961 top1=87.58% top5=99.43% time=53.1s
+[tomato_head_only] epoch 12: loss=0.2906 top1=87.62% top5=99.49% time=52.7s
+[tomato_head_only] epoch 13: loss=0.2878 top1=87.73% top5=99.49% time=52.5s
+[tomato_head_only] epoch 14: loss=0.2862 top1=87.87% top5=99.51% time=53.5s
+[tomato_head_only] epoch 15: loss=0.2825 top1=87.95% top5=99.55% time=52.4s
+[tomato_head_only] epoch 16: loss=0.2808 top1=88.11% top5=99.51% time=52.5s
+[tomato_head_only] epoch 17: loss=0.2766 top1=88.38% top5=99.49% time=53.3s
+[tomato_head_only] epoch 18: loss=0.2757 top1=88.09% top5=99.49% time=52.7s
+[tomato_head_only] epoch 19: loss=0.2735 top1=88.42% top5=99.51% time=52.5s
+[tomato_head_only] epoch 20: loss=0.2732 top1=88.28% top5=99.55% time=52.6s
+[tomato_head_only] epoch 21: loss=0.2696 top1=88.11% top5=99.59% time=53.4s
+[tomato_head_only] epoch 22: loss=0.2687 top1=88.14% top5=99.53% time=52.5s
+[tomato_head_only] epoch 23: loss=0.2704 top1=87.95% top5=99.57% time=52.3s
+[tomato_head_only] epoch 24: loss=0.2693 top1=88.42% top5=99.55% time=53.3s
+[tomato_head_only] epoch 25: loss=0.2691 top1=88.01% top5=99.61% time=52.6s
+[tomato_head_only] epoch 26: loss=0.2662 top1=88.09% top5=99.57% time=52.6s
+[tomato_head_only] epoch 27: loss=0.2640 top1=88.09% top5=99.55% time=52.8s
+[tomato_head_only] epoch 28: loss=0.2673 top1=87.99% top5=99.55% time=52.6s
+[tomato_head_only] epoch 29: loss=0.2642 top1=88.40% top5=99.57% time=52.5s
+[tomato_head_only] epoch 30: loss=0.2640 top1=88.26% top5=99.55% time=52.5s
+[tomato_head_only] epoch 31: loss=0.2630 top1=88.59% top5=99.57% time=53.6s
+[tomato_head_only] epoch 32: loss=0.2576 top1=88.24% top5=99.59% time=52.7s
+[tomato_head_only] epoch 33: loss=0.2593 top1=88.59% top5=99.57% time=52.6s
+[tomato_head_only] epoch 34: loss=0.2585 top1=88.61% top5=99.57% time=53.4s
+[tomato_head_only] epoch 35: loss=0.2574 top1=88.61% top5=99.57% time=52.7s
+[tomato_head_only] epoch 36: loss=0.2608 top1=88.38% top5=99.57% time=52.7s
+[tomato_head_only] epoch 37: loss=0.2552 top1=88.61% top5=99.57% time=52.5s
+[tomato_head_only] epoch 38: loss=0.2569 top1=88.09% top5=99.57% time=53.4s
+[tomato_head_only] epoch 39: loss=0.2583 top1=88.46% top5=99.55% time=52.7s
+SUMMARY: {
+  "dataset": "tomato",
+  "freeze_mode": "head_only",
+  "n_classes": 11,
+  "best_top1": 0.8860655737704918,
+  "final_top1": 0.8846311475409836,
+  "final_top5": 0.9954918032786885,
+  "final_precision_macro": 0.8885799930150194,
+  "final_recall_macro": 0.8864543795897287,
+  "final_f1_macro": 0.8852683256298369,
+  "total_params_M": 19.849124,
+  "trainable_params_M": 0.011275,
+  "epochs_run": 40
+}
